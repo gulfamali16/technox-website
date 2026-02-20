@@ -484,8 +484,10 @@ const BACKEND_URL = '';   // ← replace with your Render URL for production
       const res  = await fetch(`${BACKEND_URL}/api/events`, { signal: AbortSignal.timeout(5000) });
       const json = await res.json();
       allEvents  = json.data || FALLBACK_EVENTS;
-    } catch {
+    } catch (err) {
+      // TimeoutError: backend took too long; TypeError: network failure – use fallback either way
       allEvents = FALLBACK_EVENTS;
+      if (err.name !== 'TimeoutError' && err.name !== 'TypeError') console.warn('[Events] Unexpected error:', err);
     }
     renderEvents(allEvents);
   }
