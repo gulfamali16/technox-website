@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Faculty Advisor",
+    "fullName": "Dr. Umar Rashid",
+    "role": "Faculty Advisor",
+    "bio": "Assistant Professor at COMSATS University Islamabad, Vehari Campus. PhD in Computer Science with expertise in AI and Machine Learning.",
+    "avatar": "https://avatars.githubusercontent.com/u/140166609?v=4",
+    "social": { "email": "drumarrashidcui@gmail.com" }
+  },
+  {
+    "id": 2,
+    "name": "President",
+    "fullName": "President TechnoX",
+    "role": "President",
+    "bio": "Leading TechnoX with a vision to foster innovation and technical excellence among CS students.",
+    "avatar": "https://avatars.githubusercontent.com/u/1?v=4",
+    "social": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 3,
+    "name": "Vice President",
+    "fullName": "Vice President TechnoX",
+    "role": "Vice President",
+    "bio": "Supporting society operations and coordinating between different departments and committees.",
+    "avatar": "https://avatars.githubusercontent.com/u/2?v=4",
+    "social": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 4,
+    "name": "General Secretary",
+    "fullName": "General Secretary",
+    "role": "General Secretary",
+    "bio": "Managing official communications, documentation, and administrative affairs of the society.",
+    "avatar": "https://avatars.githubusercontent.com/u/3?v=4",
+    "social": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 5,
+    "name": "Head of Technical",
+    "fullName": "Head of Technical",
+    "role": "Head of Technical",
+    "bio": "Overseeing all technical workshops, competitions, and ensuring quality of technical content.",
+    "avatar": "https://avatars.githubusercontent.com/u/4?v=4",
+    "social": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 6,
+    "name": "Head of Media",
+    "fullName": "Head of Media",
+    "role": "Head of Media",
+    "bio": "Managing social media presence, content creation, and digital marketing for TechnoX.",
+    "avatar": "https://avatars.githubusercontent.com/u/5?v=4",
+    "social": { "github": "#", "linkedin": "#" }
+  },
+  {
+    "id": 7,
+    "name": "Head of Events",
+    "fullName": "Head of Events",
+    "role": "Head of Events",
+    "bio": "Planning and executing all TechnoX events, workshops, and seminars with precision.",
+    "avatar": "https://avatars.githubusercontent.com/u/6?v=4",
+    "social": { "github": "#", "linkedin": "#" }
+  }
+]

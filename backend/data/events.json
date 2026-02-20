@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Web Development Workshop",
+    "date": "2025-03-15",
+    "description": "Learn modern web development with HTML, CSS, and JavaScript. Build responsive websites from scratch.",
+    "type": "workshop",
+    "status": "upcoming",
+    "registrationLink": "#"
+  },
+  {
+    "id": 2,
+    "title": "AI & Machine Learning Seminar",
+    "date": "2025-03-22",
+    "description": "Explore the fundamentals of AI and ML. Understand real-world applications and future prospects.",
+    "type": "seminar",
+    "status": "upcoming",
+    "registrationLink": "#"
+  },
+  {
+    "id": 3,
+    "title": "Inter-University Coding Competition",
+    "date": "2025-04-05",
+    "description": "Compete with the best programmers across universities. Solve algorithmic challenges and win prizes.",
+    "type": "competition",
+    "status": "upcoming",
+    "registrationLink": "#"
+  },
+  {
+    "id": 4,
+    "title": "Cybersecurity Awareness Workshop",
+    "date": "2025-02-10",
+    "description": "Learn about ethical hacking, network security, and how to protect digital assets.",
+    "type": "workshop",
+    "status": "past",
+    "registrationLink": "#"
+  },
+  {
+    "id": 5,
+    "title": "TechnoX Annual Tech Fest",
+    "date": "2025-04-20",
+    "description": "Annual celebration of technology with multiple events, speakers, and networking opportunities.",
+    "type": "seminar",
+    "status": "upcoming",
+    "registrationLink": "#"
+  },
+  {
+    "id": 6,
+    "title": "Python Bootcamp",
+    "date": "2025-02-28",
+    "description": "Intensive 2-day Python bootcamp covering basics to advanced topics including data science libraries.",
+    "type": "workshop",
+    "status": "past",
+    "registrationLink": "#"
+  },
+  {
+    "id": 7,
+    "title": "Competitive Programming Bootcamp",
+    "date": "2025-05-10",
+    "description": "Sharpen your algorithmic problem-solving skills with intensive training on data structures and algorithms.",
+    "type": "competition",
+    "status": "upcoming",
+    "registrationLink": "#"
+  }
+]

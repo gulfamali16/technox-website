@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechnoX Society – The Official Computer Science Society of COMSATS University Islamabad, Vehari Campus. Innovate. Code. Transform." />
+  <meta name="keywords" content="TechnoX, COMSATS, Vehari, Computer Science, Society, Programming, AI, Web Development" />
+  <meta name="author" content="TechnoX Society" />
+  <meta name="theme-color" content="#0A0A0F" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TechnoX Society | COMSATS University Vehari" />
+  <meta property="og:description" content="The Official CS Society of COMSATS University Islamabad, Vehari Campus. Innovate. Code. Transform." />
+  <meta property="og:url" content="https://technox.vercel.app" />
+  <meta property="og:image" content="https://technox.vercel.app/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TechnoX Society | COMSATS University Vehari" />
+  <meta name="twitter:description" content="Innovate. Code. Transform. The Official CS Society of COMSATS University Islamabad, Vehari Campus." />
+
+  <title>TechnoX Society | COMSATS University Vehari</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="canonical" href="https://technox.vercel.app" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ PRELOADER ═══════════════════════════ -->
+  <div id="preloader" role="status" aria-label="Loading TechnoX website">
+    <div class="preloader-inner">
+      <svg class="preloader-logo" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+              font-family="'Courier New', monospace" font-weight="700" font-size="28"
+              fill="url(#preloaderGrad)">TechnoX</text>
+        <defs>
+          <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#8C8C8C"/>
+            <stop offset="100%" style="stop-color:#00D4FF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <p class="preloader-text">Initializing...</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ CUSTOM CURSOR ═══════════════════════════ -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="TechnoX Society – go to top">
+        <svg viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#8C8C8C"/>
+              <stop offset="100%" style="stop-color:#00D4FF"/>
+            </linearGradient>
+          </defs>
+          <text x="0" y="30" font-family="'Courier New', monospace" font-weight="700"
+                font-size="26" fill="url(#logoGrad)">TechnoX</text>
+        </svg>
+        <span class="nav-logo-sub">Society</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#hero"          class="nav-link" data-section="hero">Home</a></li>
+        <li><a href="#about"         class="nav-link" data-section="about">About</a></li>
+        <li><a href="#events"        class="nav-link" data-section="events">Events</a></li>
+        <li><a href="#team"          class="nav-link" data-section="team">Team</a></li>
+        <li><a href="#achievements"  class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#contact"       class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Join CTA -->
+      <a href="#contact" class="btn btn-primary nav-cta" aria-label="Join TechnoX Society">Join Us</a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#hero"         class="mobile-link">Home</a></li>
+        <li><a href="#about"        class="mobile-link">About</a></li>
+        <li><a href="#events"       class="mobile-link">Events</a></li>
+        <li><a href="#team"         class="mobile-link">Team</a></li>
+        <li><a href="#achievements" class="mobile-link">Achievements</a></li>
+        <li><a href="#contact"      class="mobile-link">Contact</a></li>
+        <li><a href="#contact"      class="btn btn-primary mobile-link-cta">Join Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section id="hero" aria-label="Hero section">
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <!-- SVG Logo mark -->
+      <div class="hero-logo-wrap reveal-up">
+        <svg class="hero-logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#8C8C8C"/>
+              <stop offset="100%" style="stop-color:#00D4FF"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+              <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- Hexagon shape -->
+          <polygon points="100,10 185,55 185,145 100,190 15,145 15,55"
+                   fill="none" stroke="url(#heroGrad)" stroke-width="3" filter="url(#glow)"/>
+          <!-- Inner X -->
+          <line x1="60" y1="65" x2="140" y2="135" stroke="url(#heroGrad)" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
+          <line x1="140" y1="65" x2="60" y2="135" stroke="url(#heroGrad)" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
+          <!-- Center dot -->
+          <circle cx="100" cy="100" r="8" fill="#00D4FF" filter="url(#glow)"/>
+        </svg>
+      </div>
+
+      <h1 class="hero-title reveal-up">TechnoX</h1>
+      <!-- Typing animation target -->
+      <div class="hero-tagline reveal-up" aria-label="Innovate. Code. Transform.">
+        <span id="typing-text" aria-live="polite"></span><span class="typing-cursor" aria-hidden="true">|</span>
+      </div>
+      <p class="hero-subtitle reveal-up">
+        The Official CS Society of COMSATS University Islamabad, Vehari Campus
+      </p>
+      <div class="hero-ctas reveal-up">
+        <a href="#events" class="btn btn-primary" aria-label="Explore upcoming events">Explore Events</a>
+        <a href="#contact" class="btn btn-outline" aria-label="Join TechnoX Society">Join TechnoX</a>
+      </div>
+    </div>
+
+    <!-- Scroll-down arrow -->
+    <a href="#about" class="scroll-down" aria-label="Scroll down to about section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Who We Are</span>
+        <h2 id="about-heading" class="section-title">About <span class="gradient-text">TechnoX</span></h2>
+        <p class="section-subtitle">Empowering the next generation of tech innovators</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Text side -->
+        <div class="about-text reveal-left">
+          <p>
+            TechnoX Society is the premier Computer Science society at COMSATS University
+            Islamabad, Vehari Campus. Founded with a mission to bridge the gap between academic
+            knowledge and industry-ready skills, we create a dynamic ecosystem where students
+            learn, compete, and grow together.
+          </p>
+          <p>
+            Through workshops, seminars, hackathons, and networking events, TechnoX cultivates
+            a culture of innovation and collaboration. Whether you're a beginner curious about
+            coding or an experienced developer, TechnoX has something for you.
+          </p>
+
+          <!-- Stats counters -->
+          <div class="stats-grid" aria-label="TechnoX statistics">
+            <div class="stat-item" data-count="98">
+              <span class="stat-number" aria-label="98 plus members">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Members</span>
+            </div>
+            <div class="stat-item" data-count="20">
+              <span class="stat-number" aria-label="20 plus events">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Events</span>
+            </div>
+            <div class="stat-item" data-count="15">
+              <span class="stat-number" aria-label="15 plus workshops">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Workshops</span>
+            </div>
+            <div class="stat-item" data-count="10">
+              <span class="stat-number" aria-label="10 plus competitions">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Competitions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission & Vision cards -->
+        <div class="about-cards reveal-right">
+          <div class="glass-card mission-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Our Mission</h3>
+            <p>To nurture technical talent, foster innovation, and bridge the gap between classroom learning and real-world technology through hands-on experiences and industry exposure.</p>
+          </div>
+          <div class="glass-card vision-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M20.188 10.934c.322.566.322 1.566 0 2.132C18.768 15.648 15.636 18 12 18c-3.636 0-6.768-2.352-8.188-4.934-.322-.566-.322-1.566 0-2.132C5.232 8.352 8.364 6 12 6c3.636 0 6.768 2.352 8.188 4.934z"/>
+              </svg>
+            </div>
+            <h3>Our Vision</h3>
+            <p>To become the leading student tech society in Pakistan, recognized for producing world-class developers, innovators, and technology leaders who shape the digital future.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EVENTS ═══════════════════════════ -->
+  <section id="events" aria-labelledby="events-heading">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What's Happening</span>
+        <h2 id="events-heading" class="section-title">Upcoming <span class="gradient-text">Events</span></h2>
+        <p class="section-subtitle">Workshops, seminars, and competitions to sharpen your skills</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs reveal-up" role="tablist" aria-label="Filter events by type">
+        <button class="filter-tab active" role="tab" aria-selected="true"  data-filter="all"         >All</button>
+        <button class="filter-tab"        role="tab" aria-selected="false" data-filter="workshop"    >Workshops</button>
+        <button class="filter-tab"        role="tab" aria-selected="false" data-filter="seminar"     >Seminars</button>
+        <button class="filter-tab"        role="tab" aria-selected="false" data-filter="competition" >Competitions</button>
+      </div>
+
+      <!-- Event cards grid – populated by JS -->
+      <div class="events-grid" id="events-grid" aria-live="polite" aria-label="Events list">
+        <!-- Cards injected by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ TEAM ═══════════════════════════ -->
+  <section id="team" aria-labelledby="team-heading">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">The People Behind TechnoX</span>
+        <h2 id="team-heading" class="section-title">Meet the <span class="gradient-text">Team</span></h2>
+        <p class="section-subtitle">Passionate individuals driving innovation at Vehari Campus</p>
+      </div>
+
+      <!-- Team cards grid – populated by JS -->
+      <div class="team-grid" id="team-grid" aria-label="Team members">
+        <!-- Flip cards injected by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ ACHIEVEMENTS / WORKSHOPS ═══════════════════════════ -->
+  <section id="achievements" aria-labelledby="achievements-heading">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Our Journey</span>
+        <h2 id="achievements-heading" class="section-title">Workshops &amp; <span class="gradient-text">Achievements</span></h2>
+        <p class="section-subtitle">A timeline of growth, learning, and milestones</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline" aria-label="Workshop and achievement timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <span class="timeline-date">Feb 2025</span>
+            <h3>Web Development Workshop</h3>
+            <p>Taught 40+ students HTML5, CSS3, JavaScript ES6, and responsive design principles. Participants built live projects.</p>
+            <div class="timeline-tags">
+              <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">40+ Attendees</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>
+              </svg>
+            </div>
+            <span class="timeline-date">Jan 2025</span>
+            <h3>AI &amp; Machine Learning Bootcamp</h3>
+            <p>Two-day intensive bootcamp covering ML fundamentals, Python libraries (NumPy, Pandas, Scikit-learn), and hands-on model training.</p>
+            <div class="timeline-tags">
+              <span class="tag">AI/ML</span><span class="tag">Python</span><span class="tag">35+ Attendees</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <span class="timeline-date">Dec 2024</span>
+            <h3>Cybersecurity Awareness Session</h3>
+            <p>Ethical hacking fundamentals, network security, penetration testing basics, and hands-on CTF challenges for 50+ students.</p>
+            <div class="timeline-tags">
+              <span class="tag">Cybersecurity</span><span class="tag">CTF</span><span class="tag">50+ Attendees</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <span class="timeline-date">Nov 2024</span>
+            <h3>Competitive Programming Contest</h3>
+            <p>Inter-departmental coding competition with 60+ participants. Topics included dynamic programming, graph algorithms, and data structures.</p>
+            <div class="timeline-tags">
+              <span class="tag">Competitive Programming</span><span class="tag">60+ Participants</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Achievement highlight cards -->
+      <div class="achievements-grid" aria-label="Key achievements">
+        <div class="achievement-card glass-card reveal-up">
+          <div class="achievement-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </div>
+          <h3>Best CS Society 2024</h3>
+          <p>Recognized by COMSATS administration for outstanding contribution to student development and technical education.</p>
+        </div>
+        <div class="achievement-card glass-card reveal-up">
+          <div class="achievement-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>98+ Active Members</h3>
+          <p>Rapidly growing community of passionate CS students committed to learning and building the future of technology.</p>
+        </div>
+        <div class="achievement-card glass-card reveal-up">
+          <div class="achievement-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>20+ Events Organized</h3>
+          <p>Successfully organized workshops, seminars, competitions, and tech fests that impacted hundreds of students across campus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 id="contact-heading" class="section-title">Contact <span class="gradient-text">Us</span></h2>
+        <p class="section-subtitle">Have a question, want to collaborate, or ready to join? Reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info reveal-left">
+          <div class="contact-info-card glass-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <p>COMSATS University Islamabad,<br/>Vehari Campus, Vehari, Punjab, Pakistan</p>
+            </div>
+          </div>
+          <div class="contact-info-card glass-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:drumarrashidcui@gmail.com">drumarrashidcui@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-info-card glass-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Follow Us</h3>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="TechnoX on GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="TechnoX on LinkedIn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="TechnoX on Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Maps embed -->
+          <div class="map-container reveal-up">
+            <iframe
+              title="COMSATS University Vehari on Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3435.4!2d72.35!3d30.03!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b5c0000000001%3A0x0!2sCOMSATS+University+Vehari!5e0!3m2!1sen!2s!4v1"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Map showing COMSATS University Vehari location">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal-right">
+          <form id="contact-form" class="glass-card contact-form" novalidate aria-label="Contact form">
+            <h3>Send a Message</h3>
+
+            <div class="form-group">
+              <label for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="contact-name" name="name" placeholder="Your full name"
+                     required autocomplete="name" aria-required="true" />
+              <span class="field-error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="contact-email" name="email" placeholder="your@email.com"
+                     required autocomplete="email" aria-required="true" />
+              <span class="field-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="How can we help?" autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="contact-message" name="message" rows="5"
+                        placeholder="Tell us more..." required aria-required="true"></textarea>
+              <span class="field-error" id="message-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <div id="form-feedback" class="form-feedback" role="alert" aria-live="assertive"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="TechnoX Society">
+            <svg viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="footerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#8C8C8C"/>
+                  <stop offset="100%" style="stop-color:#00D4FF"/>
+                </linearGradient>
+              </defs>
+              <text x="0" y="30" font-family="'Courier New', monospace" font-weight="700"
+                    font-size="26" fill="url(#footerGrad)">TechnoX</text>
+            </svg>
+          </a>
+          <p class="footer-tagline">Innovate. Code. Transform.</p>
+          <p class="footer-desc">The Official Computer Science Society of COMSATS University Islamabad, Vehari Campus.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <nav class="footer-col" aria-label="Quick links">
+          <h4 class="footer-col-heading">Quick Links</h4>
+          <ul role="list">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Programs -->
+        <div class="footer-col">
+          <h4 class="footer-col-heading">Programs</h4>
+          <ul role="list">
+            <li><a href="#events">Web Development</a></li>
+            <li><a href="#events">AI &amp; Machine Learning</a></li>
+            <li><a href="#events">Cybersecurity</a></li>
+            <li><a href="#events">Competitive Programming</a></li>
+            <li><a href="#events">Tech Fest</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col footer-newsletter">
+          <h4 class="footer-col-heading">Stay Updated</h4>
+          <p>Subscribe to get notified about upcoming events and workshops.</p>
+          <form class="newsletter-form" id="newsletter-form" novalidate aria-label="Newsletter signup">
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" required />
+            <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+          </form>
+        </div>
+
+      </div><!-- /.footer-grid -->
+
+      <div class="footer-bottom">
+        <p>Made with <span aria-label="love">❤️</span> by TechnoX Society &copy; <span id="footer-year"></span></p>
+        <p class="footer-bottom-right">COMSATS University Islamabad, Vehari Campus</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
